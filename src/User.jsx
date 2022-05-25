@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import * as userService from './services/userService';
+import { properties } from './properties.js';
 
 const User = () => {
 	const [isLoading, setIsLoading] = useState(false);
-	const [data, setData] = useState({ userid: 'nimagopali@gmail.com', password: '0bb5c3052747419b9b46d84a8f0c5b7c', outputtype: 'Json', users: [] });
+	const [data, setData] = useState({ userid: properties.userid, password: properties.password, outputtype: 'Json', users: [] });
 
 	useEffect(() => {
 		setIsLoading(true);

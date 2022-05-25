@@ -1,21 +1,5 @@
 import axios from 'axios';
 
-// const payload = {
-// 	userid: 'nimagopali@gmail.com',
-// 	password: '0bb5c3052747419b9b46d84a8f0c5b7c',
-// 	outputtype: 'Json',
-// 	users: [
-// 		{
-// 			first_name: 'StringValue',
-// 			last_name: 'StringValue',
-// 			company_name: 'StringValue',
-// 			company_full_address: 'Street Address, City, State, Zip',
-// 			website: 'StringValue',
-// 			phone: '2083567880'
-// 		}
-// 	]
-// };
-
 const addUser = payload => {
 	const config = {
 		method: 'POST',
