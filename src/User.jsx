@@ -21,11 +21,19 @@ const User = () => {
 				company_name: user.company.name,
 				company_full_address: user.address.street + ', ' + user.address.city + ', ' + user.address.zipcode,
 				website: user.website,
-				phone: user.phone
+				phone: extractPhoneNum(user.phone)
 			}));
 			return copy;
 		});
 		setIsLoading(false);
+	};
+
+	const extractPhoneNum = num => {
+		let removeExt = num.split(' ')[0].replace(/\W/g, '');
+		if (removeExt.length > 10) {
+			removeExt = removeExt.substring(1);
+		}
+		return removeExt;
 	};
 
 	const onGetAllUsersError = err => {
@@ -44,6 +52,7 @@ const User = () => {
 	if (data.users.length > 0 && !isLoading) {
 		addUser(data);
 	}
+
 	return (
 		<div>
 			<span>All Users: TODO for later</span>

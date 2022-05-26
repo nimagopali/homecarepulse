@@ -6,8 +6,8 @@ const addUser = payload => {
 		url: 'https://dev.app.homecarepulse.com/Primary/?FlowId=7423bd80-cddb-11ea-9160-326dddd3e106&Action=api',
 		data: payload,
 		crossdomain: true,
-		withCredentials: true,
-		headers: { 'Content-Type': 'application/json' }
+		withCredentials: false,
+		headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 	};
 	return axios(config);
 };
